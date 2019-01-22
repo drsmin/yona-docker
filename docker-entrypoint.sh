@@ -22,9 +22,9 @@ if [ -f "/inited" ] ; then
 else
         echo "Initializing user..."
         mysql -uroot < /data/init.sql
-	mv -n /data/yona-dist/bin /data/yona
-        mv -n /data/yona-dist/lib /data/yona
-        mv -n /data/yona-dist/share /data/yona
+	mv /data/yona-dist/bin /data/yona
+        mv /data/yona-dist/lib /data/yona
+        mv /data/yona-dist/share /data/yona
         rm -rf /data/yona-dist
         touch /inited;
 fi
